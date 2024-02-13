@@ -1,0 +1,43 @@
+python -m venv venv
+python
+from app.entities import Carro, Cliente, Cupo, Pago
+exit ()
+pip install flask
+pip freeze > requierements.txt
+python
+from app.entities import Cliente
+>>> from app.entities import Carro  
+>>> from app.entities import Cupo 
+>>> from app.entities import Pago
+>>> #crear 2 cupos
+>>> cupo1 = Cupo("A")  
+>>> cupo1
+>>>cupo1.letra
+>>> cupo2 = Cupo("B")
+>>> cupo2
+<app.entities.Cupo object at 0x00000283B37FCBC0>
+>>> cupo2.letra
+'B'
+>>> #crear 2 vehiculos
+>>> carro1 = Carro("ASD 345","Camion")
+>>> carro2 = Carro("RET 321","Taxi")
+>>> carro2 = Carro("RET 321","Taxi")
+>>> carro1
+>> carro1.placa
+#crear cliente
+>>> cliente1= Cliente(identificacion=12233445566, celular=3102456780, nombre="Daniela Mendoza", lista_carros = [carro1, carro2])
+>>> cliente1.lista_carros
+>>> cliente1.lista_carros[0]
+>>> cliente1.lista_carros[0].placa
+>>> cliente1.lista_carros[1].placa
+>>> pago1 = Pago("13-02-2023", "10:00 AM", "13-02-2023", "2:00 PM", 5000, cliente1.lista_carros[0], cupo1)
+>>> pago2 = Pago("15-03-2023", "11:00 AM", "15-03-2023", "2:00 PM", 4000, cliente1.lista_carros[1], cupo2)
+>>> pago2
+>>> lista_pagos =[]
+>>> lista_pagos.append(pago1)
+>>> lista_pagos.append(pago2)
+>>> for p in lista_pagos:
+...  print(p.carro.placa)
+...  print(p.carro.tipo_vehiculo)
+...  print(p.cupo.letra)
+...  print("-------------------")
