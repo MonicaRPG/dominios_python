@@ -18,7 +18,7 @@ from app.entities import Cliente
 <app.entities.Cupo object at 0x00000283B37FCBC0>
 >>> cupo2.letra
 'B'
->>> #crear 2 vehiculos
+>>> #crealist))r 2 vehiculos
 >>> carro1 = Carro("ASD 345","Camion")
 >>> carro2 = Carro("RET 321","Taxi")
 >>> carro2 = Carro("RET 321","Taxi")
